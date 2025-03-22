@@ -18,6 +18,9 @@ public class DealEntity {
     @Id
     private UUID id;
 
+    @Column(name = "name", nullable = false)
+    private String name;
+
     @Column(name = "date", nullable = false)
     private LocalDate date;
 
