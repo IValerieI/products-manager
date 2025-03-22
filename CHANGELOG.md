@@ -1,4 +1,10 @@
 # Changelog
+
+### 0.3.0
+- Added method to view report on supplies depending on fields in request
+- Added Specification<SupplyEntity>
+- Added endpoint POST/supply-management/report
+
 ### 0.2.0
 - Added method to process deal which can contain a few supplies with different products 
 - Added additional repositories
