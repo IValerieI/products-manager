@@ -1,5 +1,8 @@
 # Changelog
 
+### 0.3.1
+- Fixed issue with folders
+
 ### 0.3.0
 - Added method to view report on supplies depending on fields in request
 - Added Specification<SupplyEntity>

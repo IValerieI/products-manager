@@ -14,7 +14,7 @@ BEGIN TRANSACTION;
 
     CREATE TABLE IF NOT EXISTS product (
         id              UUID            PRIMARY KEY,
-        current_price   NUMERIC(8, 2)   NOT NULL
+        current_price   NUMERIC(8, 2)   NOT NULL,
         name            VARCHAR(20)     NOT NULL UNIQUE,
         description     VARCHAR(100)
     );
@@ -23,7 +23,7 @@ BEGIN TRANSACTION;
         id            UUID            PRIMARY KEY,
         date          DATE            NOT NULL,
         seller_id     UUID            REFERENCES seller (id)  NOT NULL,
-        customer_id   UUID            REFERENCES customer (id)  NOT NULL,
+        customer_id   UUID            REFERENCES customer (id)  NOT NULL
     );
 
     CREATE TABLE IF NOT EXISTS supply (
@@ -34,7 +34,7 @@ BEGIN TRANSACTION;
         seller_id       UUID            REFERENCES seller (id)  NOT NULL,
         customer_id     UUID            REFERENCES customer (id)  NOT NULL,
         deal_id         UUID            REFERENCES deal (id)  NOT NULL,
-        product_id      UUID            REFERENCES product (id)  NOT NULL,
+        product_id      UUID            REFERENCES product (id)  NOT NULL
     );
 
 COMMIT;
