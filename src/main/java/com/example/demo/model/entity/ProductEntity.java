@@ -27,6 +27,6 @@ public class ProductEntity {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "current_price")
+    @Column(name = "current_price", nullable = false)
     private BigDecimal currentPrice;
 }
