@@ -1,5 +1,7 @@
 package com.example.demo.service.impl;
 
+import com.example.demo.mapper.SupplyMapper;
+import com.example.demo.model.dto.response.SupplyResponse;
 import com.example.demo.model.entity.SupplyEntity;
 import com.example.demo.repository.SupplyRepository;
 import com.example.demo.service.SupplyService;
@@ -13,9 +15,12 @@ import java.util.List;
 public class SupplyServiceImpl implements SupplyService {
 
     private final SupplyRepository supplyRepository;
+    private final SupplyMapper supplyMapper;
 
     @Override
-    public List<SupplyEntity> getSupplies() {
-        return supplyRepository.findAll();
+    public List<SupplyResponse> getSupplies() {
+        return supplyRepository.findAll().stream()
+                .map(supplyMapper::mapToSupplyResponse)
+                .toList();
     }
 }
