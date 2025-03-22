@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: ${PROFILE_VALUE}
+  application:
+    name: neo-bank-deposit
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: org.postgresql.Driver
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    locations: classpath:db
