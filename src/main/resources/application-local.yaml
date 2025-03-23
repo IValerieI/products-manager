@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/test}
+    username: ${SPRING_DATASOURCE_USERNAME:test}
+    password: ${SPRING_DATASOURCE_PASSWORD:test}
+    hikari:
+      schema: products-manager
+  flyway:
+    schemas: products-manager
+    user: ${SPRING_DATASOURCE_USERNAME:test}
+    password: ${SPRING_DATASOURCE_PASSWORD:test}
