@@ -17,3 +17,7 @@ spring:
     enabled: true
     locations: classpath:db
     validate-on-migrate: true
+
+logging:
+  level:
+    root: info
