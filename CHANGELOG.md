@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.4.0
+- Added method to update price for product
+- Added endpoint POST/product-management
+
 ### 0.3.1
 - Fixed issue with folders
 

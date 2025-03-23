@@ -1,5 +1,6 @@
 package com.example.demo.controller.exception_handler;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.coyote.BadRequestException;
@@ -22,6 +23,7 @@ import static com.example.demo.util.LogFormatUtil.HANDLER_ERROR_INFO_FORMAT;
 import static java.lang.String.format;
 
 @Slf4j
+@Hidden
 @RestControllerAdvice
 public class RestExceptionHandler {
 
